@@ -1,0 +1,55 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	min-height: 100vh;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+.container {
+	margin:auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	background: #fffbca;
+	background: -moz-linear-gradient(top, #fffbca 0%, #ffffff 54%);
+	background: -webkit-linear-gradient(top, #fffbca 0%,#ffffff 54%);
+	background: linear-gradient(to bottom, #fffbca 0%,#ffffff 54%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffbca', endColorstr='#ffffff',GradientType=0 );
+}
+.logo {
+	margin-bottom: 2rem;
+	margin-top: 4rem;
+	width: 400px;
+ 	mix-blend-mode: multiply;
+}
+.autocomplete-input {
+	border-radius: 40px;
+	border: 1px solid #FDCB34;
+	height: 40px;
+	width: 100%;
+	padding: 0 20px;
+	outline: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+div[role="combobox"] {
+	width: 400px;
+}
+.autocomplete-ul {
+	list-style: none;
+	padding: 0;
+}
+.autocomplete-ul li {
+	font-size: 2rem;
+}
