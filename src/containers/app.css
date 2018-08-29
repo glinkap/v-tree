@@ -44,7 +44,7 @@ body {
 	font-weight: bold;
 }
 div[role="combobox"] {
-	width: 400px;
+	/*width: 400px;*/
 }
 .autocomplete-ul {
 	list-style: none;

@@ -1,10 +1,7 @@
 import { combineReducers } from 'redux'
 // import {histogram} from './histogram'
-import {chart} from './chart'
-import counter from './counter'
+import {autocompleteReducer} from './autocompleteReducer'
 
 export default combineReducers({
-	// histogram,
-	counter,
-	chart
+	autocompleteReducer
 })
