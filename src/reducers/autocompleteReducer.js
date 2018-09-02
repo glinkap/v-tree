@@ -1,13 +1,14 @@
 const initialState = {
 	focus: false,
-	searchProcess:false
+	searchProcess:false,
+	inputedValue:''
 
 }
 export function autocompleteReducer(state = initialState, action) {
 	switch(action.type) {		
 		case 'ON_CHANGE': {
 			return {
-				...state
+				...state, inputedValue: action
 			}
 		}
 		case 'FOCUS': {
