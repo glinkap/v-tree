@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import ListComp from './listComp';
+// import ListComp from './listComp';
 import { connect } from 'react-redux';
 class Autocomplete extends Component {
 	render() {
-		 
 		return (
 			<div className="autocomplete">
 				<input	placeholder="Введите проблему" 
 						className="autocomplete-input" 
-						ref={input => {this.input = input}} 
-						onChange={this.props.onChangeInput.bind(this)} />				
+						onChange={this.props.searchVariants.bind(this)} />
 				{/*<ListComp className="autocomplete-ul" />*/}
 			</div>
 
@@ -17,14 +15,40 @@ class Autocomplete extends Component {
 	}
 }
 const mapDispatchToProps = dispatch => ({
-	search: () => dispatch({
-		type: 'SEARCH',
-		payload:''
-	}), 
-	onChangeInput: (e) => dispatch({
-		type: 'ON_CHANGE',
-		payloads: e.target.value
-	})
+	searchVariants: (e) => {
+		const getVariants = () => {
+			return (dispatch) => {
+				const inputedValue = e.target.value;
+				dispatch({
+					type: 'ON_CHANGE',
+					payload: inputedValue
+				});
+				if (inputedValue.length > 2) {
+					fetch('https://v-tree.ru/api/autocomplete/?w='+inputedValue) 
+				}
+
+			}			
+		}
+		dispatch(getVariants())
+	},
+	getVariants:() =>  {
+		const fetchVariants = () => {
+			return dispatch => {
+				setTimeout(()=> {
+					console.log(this);
+					dispatch({type: 'FETCH', paload: []})
+				},2000)
+			}
+		}
+		dispatch(fetchVariants());
+	},
+	onChangeInput: (e) => {
+		const inputedValue = e.target.value;
+		dispatch({
+			type: 'ON_CHANGE',
+			payload: inputedValue
+		})
+	},
 });
 
 export default connect(() => ({}), mapDispatchToProps)(Autocomplete);
