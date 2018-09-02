@@ -24,8 +24,16 @@ const mapDispatchToProps = dispatch => ({
 					payload: inputedValue
 				});
 				if (inputedValue.length > 2) {
-					fetch('https://v-tree.ru/api/autocomplete/?w='+inputedValue) 
-				}
+					fetch('https://v-tree.ru/api/autocomplete/?w='+inputedValue)
+					.then(response => response.json())
+					.then(responseData => {
+						console.log("responseData", responseData);
+
+					})
+					.catch(error => {
+       					console.log('Error fetching and parsing data', error);
+      				} 
+				)}
 
 			}			
 		}
