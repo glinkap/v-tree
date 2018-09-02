@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
-export default class autocomplete extends Component {
+import listComp from './listComp';
+import { connect } from 'react-redux';
+class Autocomplete extends Component {
 	render() {
+		console.log(this);
 		return (
-			<div>
+			<div className="autocomplete">
 				<input placeholder="Введите проблему" className="autocomplete-input" onChange={()=>null} />				
-				<ul className="autocomplete-ul">
-					<li>123</li>	
-				</ul>
+				<listComp className="autocomplete-ul" />
 			</div>
 
 		)
 	}
 }
+const mapDispatchToProps = dispatch => ({
+  search: () => dispatch({
+    type: 'SEARCH',
+    payload:''
+  }) 
+});
+
+export default connect(() => ({}), mapDispatchToProps)(Autocomplete);

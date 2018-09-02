@@ -22,7 +22,7 @@ class App extends Component {
 		return (
 			<div className="container">				
 				<img src={logo} className="logo" />	
-				<Autocomplete className="autocomplete" / >					
+				<Autocomplete 	/ >					
 			</div>	
 		)
 	}
