@@ -33,23 +33,3 @@ body {
 	width: 400px;
  	mix-blend-mode: multiply;
 }
-.autocomplete-input {
-	border-radius: 40px;
-	border: 1px solid #FDCB34;
-	height: 40px;
-	width: 100%;
-	padding: 0 20px;
-	outline: none;
-	font-size: 1.5rem;
-	font-weight: bold;
-}
-div[role="combobox"] {
-	/*width: 400px;*/
-}
-.autocomplete-ul {
-	list-style: none;
-	padding: 0;
-}
-.autocomplete-ul li {
-	font-size: 2rem;
-}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import ListComp from './listComp';
 import { connect } from 'react-redux';
 import DropdownList from './dropdownList';
+import './autocomplete.css';
 class Autocomplete extends Component {
 
 	render() {
@@ -10,7 +11,7 @@ class Autocomplete extends Component {
 				<input	placeholder="Введите проблему" 
 						className="autocomplete-input" 
 						onChange={this.props.searchVariants.bind(this)} />
-				<DropdownList  className="autocomplete-ul" />	
+				<DropdownList />	
 			</div>
 
 		)
