@@ -13,7 +13,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="container">				
-{/*				<img src={logo} className="logo" alt="logo" />	*/}
+{				<img src={logo} className="logo" alt="logo" />	}
 				<Autocomplete />
 				
 			</div>	

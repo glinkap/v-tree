@@ -6,8 +6,14 @@ body {
 	min-height: 100vh;
 	font-size: 16px;
 	box-sizing: border-box;
+	background: #fffbca;
+	background: -moz-linear-gradient(top, #fffbca 0%, #ffffff 54%);
+	background: -webkit-linear-gradient(top, #fffbca 0%,#ffffff 54%);
+	background: linear-gradient(to bottom, #fffbca 0%,#ffffff 54%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffbca', endColorstr='#ffffff',GradientType=0 );
 }
 .container {
+	box-sizing: border-box;
 	margin:auto;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -21,15 +27,16 @@ body {
 	flex-direction: column;
 	-ms-align-items: center;
 	align-items: center;
-	background: #fffbca;
-	background: -moz-linear-gradient(top, #fffbca 0%, #ffffff 54%);
-	background: -webkit-linear-gradient(top, #fffbca 0%,#ffffff 54%);
-	background: linear-gradient(to bottom, #fffbca 0%,#ffffff 54%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffbca', endColorstr='#ffffff',GradientType=0 );
 }
 .logo {
 	margin-bottom: 2rem;
 	margin-top: 4rem;
-	width: 400px;
+	width: 300px;
  	mix-blend-mode: multiply;
+}
+
+@media screen and (min-width:768px) {
+	.container {
+		max-width: 720px;
+	}
 }

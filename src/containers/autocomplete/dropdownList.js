@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+// import ButtonTag from './buttonTag';
 
 class DropdownList extends Component {
+	
+		test = (e) => {
+			console.log(this)
+			e.preventDefault();
+		}
+	
 	render() {
-		return (
-				<div className="autocomplete-ul">
-					<ul>
-						{this.props.dropListReducer.data.map((item, index) => {
-							return <li key={index} >{item.text}<p className='small'>{item.link}</p></li>
-						})}
-					</ul>	
-					
-				</div>
-			)
+		function ButtonTag(props) {
+			return <div className='listItem'>{props.text}</div>
+		}
+		const listItems = this.props.dropListReducer.data.map((item, index) => {
+			return <ButtonTag 	onClick={this.test}
+					 			key={index.toString()} 
+					 			text={item.text} 
+					 			link={item.link} />
+		})
+		return <ul className="autocomplete-ul">
+					{listItems}
+				</ul>
+			
 	}
 }
 export default connect(state => ({dropListReducer:state.dropListReducer}), dispatch =>({}))(DropdownList)

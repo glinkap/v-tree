@@ -1,4 +1,20 @@
+.autocomplete {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+}
+
 .autocomplete-input {
+	box-sizing: border-box;
 	border-radius: 40px;
 	border: 1px solid #FDCB34;
 	height: 40px;
@@ -7,18 +23,60 @@
 	outline: none;
 	font-size: 1.5rem;
 	font-weight: bold;
+	max-width: 318px;
 }
 div[role="combobox"] {
 	/*width: 400px;*/
 }
 .autocomplete-ul {
-	padding: 0;
+	box-sizing: border-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding: 20px;
+	width: 100%;
+	margin: 0;
 }
-.autocomplete-ul li {
-	font-size: 2rem;
+p {
+	margin: 0;
+}
+.autocomplete-ul .listItem {
+	display: block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	font-size: 1rem;
 	list-style: none;
-	line-height: .5;
+	line-height: .9;
+	color: #444;
+	box-sizing: border-box;
+	border-radius: 40px;
+    border: 1px solid #FDCB34;
+    padding: 4px 15px 7px 15px;
+    outline: none;
+    /*font-weight: bold;*/
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+.autocomplete-ul .listItem:hover {
+	background-color: #FDCB34;
 }
 .autocomplete-ul .small {
 	font-size: 16px;
 }
+
