@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 // import ListComp from './listComp';
 import { connect } from 'react-redux';
+import DropdownList from './dropdownList';
 class Autocomplete extends Component {
+
 	render() {
 		return (
 			<div className="autocomplete">
 				<input	placeholder="Введите проблему" 
 						className="autocomplete-input" 
 						onChange={this.props.searchVariants.bind(this)} />
-				{/*<ListComp className="autocomplete-ul" />*/}
+				<DropdownList  className="autocomplete-ul" />	
 			</div>
 
 		)
 	}
-}
+};
 const mapDispatchToProps = dispatch => ({
 	searchVariants: (e) => {
 		const getVariants = () => {
@@ -24,10 +26,11 @@ const mapDispatchToProps = dispatch => ({
 					payload: inputedValue
 				});
 				if (inputedValue.length > 2) {
-					fetch('https://v-tree.ru/api/autocomplete/?w='+inputedValue)
+					fetch('https://v-tree.ru/api/autocomplete?w='+inputedValue)
 					.then(response => response.json())
 					.then(responseData => {
 						console.log("responseData", responseData);
+						dispatch({type:'DROP_LIST', payload:responseData});
 
 					})
 					.catch(error => {
@@ -39,16 +42,8 @@ const mapDispatchToProps = dispatch => ({
 		}
 		dispatch(getVariants())
 	},
-	getVariants:() =>  {
-		const fetchVariants = () => {
-			return dispatch => {
-				setTimeout(()=> {
-					console.log(this);
-					dispatch({type: 'FETCH', paload: []})
-				},2000)
-			}
-		}
-		dispatch(fetchVariants());
+	dropListRefresh:() => {
+
 	},
 	onChangeInput: (e) => {
 		const inputedValue = e.target.value;
@@ -58,5 +53,7 @@ const mapDispatchToProps = dispatch => ({
 		})
 	},
 });
-
-export default connect(() => ({}), mapDispatchToProps)(Autocomplete);
+const mapStateToProps = (state) => {
+	return { autocomplete: state.Autocomplete}
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Autocomplete);
