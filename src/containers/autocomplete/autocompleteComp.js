@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 // import ListComp from './listComp';
 import { connect } from 'react-redux';
-import DropdownList from './dropdownList';
+import { DropdownList, Hok } from './dropdownList';
 import './autocomplete.css';
+
 class Autocomplete extends Component {
 
 	render() {
