@@ -1,1 +1,40 @@
 Когда props компонента изменяются, то происходит перерисовка HTML на основе изменённых props.
+
+Изменение внутреннего состояния также заставляет компонент и его дочерние компоненты перерисовываться.
+
+Последние тренды React поддерживает идею функциональных stateless (без состояния) компонентов. Это простейшие “чистые” компоненты, которые просто принимают props, преобразовывая их в HTML, и вызывают callback при пользовательском взаимодействии:
+
+function MyInput({ title, value, onValueChange }) {
+  return (
+    <div>
+      <label>{title}</label>
+      <input type="text" value={value} onChange={onValueChange} />
+    </div>
+  );
+}
+
+
+
+Генерирование контейнеров
+На самом деле, проще написать функцию, которая генерировала бы контейнер на основе соответствующей информации (в данном случае, дочерний компонент и функция mapStateToProps).
+
+Компонент высшего порядка (Higher Order Component — HOC), являющийся функцией, которая принимает дочерний компонент и некоторые параметры, и затем создаёт контейнер поверх этого дочернего компонента.
+
+function buildReduxContainer(ChildComponentClass, mapStateToProps) {
+  return class Container extends Component {
+    render() {
+      const { state } = this.context.store.getState();
+
+      const props = mapStateToProps(state);
+
+      return <ChildComponentClass {...this.props} {...props} />;
+    }
+  }
+}
+
+
+
+// Typically, in React constructors are only used for two purposes:
+
+// Initializing local state by assigning an object to this.state.
+// Binding event handler methods to an instance.

@@ -24,6 +24,7 @@
 	font-size: 1.5rem;
 	font-weight: bold;
 	max-width: 318px;
+	margin-bottom: 1rem;
 }
 div[role="combobox"] {
 	/*width: 400px;*/
@@ -45,7 +46,7 @@ div[role="combobox"] {
 	-ms-flex-wrap: wrap;
 	-o-flex-wrap: wrap;
 	flex-wrap: wrap;
-	padding: 20px;
+	padding: 0 20px 20px 20px;
 	width: 100%;
 	margin: 0;
 }

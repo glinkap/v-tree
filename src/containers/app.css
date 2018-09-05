@@ -1,6 +1,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	font-family: Arial;
 }
 body {
 	min-height: 100vh;
@@ -34,7 +35,10 @@ body {
 	width: 300px;
  	mix-blend-mode: multiply;
 }
-
+.small {
+	font-size: 14px;	
+	color: #444;
+}
 @media screen and (min-width:768px) {
 	.container {
 		max-width: 720px;

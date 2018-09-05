@@ -5,7 +5,6 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
 
 // const sagaMiddleware = createSagaMiddleware();
-	console.log("process.env.NODE_ENV", process.env.NODE_ENV);
 let finalStore;
 if (process.env.NODE_ENV === 'production') {
 	finalStore = createStore(rootReducer, applyMiddleware(thunk));

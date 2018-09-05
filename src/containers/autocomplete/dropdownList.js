@@ -2,31 +2,35 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import ButtonTag from './buttonTag';
 
-class DropdownList2 extends Component {
-	
-		test = (e) => {
-			console.log(this)
-			e.preventDefault();
-		}
-	
+class DropdownListComp extends Component {
 	render() {
-		function ButtonTag(props) {
-			return <div className='listItem'>{props.text}</div>
+			console.log("this.props", this.props);
+		if (this.props.dropListReducer.clear && this.props.inputedValue !=='') {
+			return <p className='small'>Ничего не найдено</p>
+		} else {
+			function ButtonTag(props) {
+				return <div className='listItem'>{props.text}</div>
+			}
+			const listItems = this.props.dropListReducer.data.map((item, index) => {
+				return <ButtonTag 	onClick={this.test}
+						 			key={index.toString()} 
+						 			text={item.text} 
+						 			link={item.link} />
+			})
+			return <ul className="autocomplete-ul">
+						{listItems}
+					</ul>
+			
 		}
-		const listItems = this.props.dropListReducer.data.map((item, index) => {
-			return <ButtonTag 	onClick={this.test}
-					 			key={index.toString()} 
-					 			text={item.text} 
-					 			link={item.link} />
-		})
-					console.log("listItems", listItems);
-		return <ul className="autocomplete-ul">
-					{listItems}
-				</ul>
 			
 	}
 }
-export const DropdownList = connect(state => ({dropListReducer:state.dropListReducer}), dispatch =>({}))(DropdownList2);
+export const DropdownList = connect(state => ({dropListReducer:state.dropListReducer,
+												inputedValue:state.autocompleteReducer.inputedValue}), dispatch =>({}))(DropdownListComp);
+
+
+
+
 export const Hok = function list(Tag) {
 	return class extends Component {
 		constructor() {
