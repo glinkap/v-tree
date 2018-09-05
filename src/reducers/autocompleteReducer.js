@@ -1,5 +1,4 @@
 const initialState = {
-	focus: false,
 	searchProcess:false,
 	inputedValue:''
 

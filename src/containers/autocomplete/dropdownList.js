@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 class DropdownListComp extends Component {
 	render() {
 			console.log("this.props", this.props);
-		if (this.props.dropListReducer.clear && this.props.inputedValue !=='') {
-			return <p className='small'>Ничего не найдено</p>
+		if (this.props.dropListReducer.clear) {
+			return  this.props.inputedValue =='' ? null : <p className='small'>Ничего не найдено</p>
 		} else {
 			function ButtonTag(props) {
 				return <div className='listItem'>{props.text}</div>
