@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { YMInitializer } from 'react-yandex-metrika';
 import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 // import * as graphActions from '../actions/graphActions';
@@ -15,7 +16,7 @@ class App extends Component {
 			<div className="container">				
 {				<img src={logo} className="logo" alt="logo" />	}
 				<Autocomplete />
-				
+				<YMInitializer accounts={[48185741]} />
 			</div>	
 		)
 	}
