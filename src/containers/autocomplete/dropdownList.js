@@ -3,19 +3,21 @@ import { connect } from 'react-redux';
 // import ButtonTag from './buttonTag';
 
 class DropdownListComp extends Component {
+	
 	render() {
-			console.log("this.props", this.props);
 		if (this.props.dropListReducer.clear) {
 			return  this.props.inputedValue =='' ? null : <p className='small'>Ничего не найдено</p>
 		} else {
-			function ButtonTag(props) {
-				return <div className='listItem'>{props.text}</div>
+
+			function clickFunc() {
+				console.log("this", this);
+			}
+
+			const ButtonTag = (props) => {
+				return <div className='listItem' onClick={props.clickFunc.bind(ButtonTag)}>{props.text}</div>
 			}
 			const listItems = this.props.dropListReducer.data.map((item, index) => {
-				return <ButtonTag 	onClick={this.test}
-						 			key={index.toString()} 
-						 			text={item.text} 
-						 			link={item.link} />
+				return <ButtonTag clickFunc={clickFunc} key={index.toString()} text={item.text} link={item.link} />
 			})
 			return <ul className="autocomplete-ul">
 						{listItems}
