@@ -16,12 +16,7 @@ class App extends Component {
 			<div className="container">				
 {				<img src={logo} className="logo" alt="logo" />	}
 				<Autocomplete />
-				{ () => {
-						if (process.env.NODE_ENV === 'production') {
-							return <YMInitializer accounts={[48185741]} />
-						}
-					}
-				}
+				{ process.env.NODE_ENV === 'development' ? null :<YMInitializer accounts={[48185741]} /> }
 			</div>	
 		)
 	}
