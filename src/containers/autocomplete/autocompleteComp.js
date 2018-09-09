@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 // import ListComp from './listComp';
 import { connect } from 'react-redux';
-import { DropdownList, Hok } from './dropdownList';
+import { DropdownList } from './dropdownList';
 import './autocomplete.css';
+import Content from './content';
+ 
 
 class Autocomplete extends Component {
 	render() {
@@ -12,7 +14,8 @@ class Autocomplete extends Component {
 						className="autocomplete-input" 
 						/*ref={this.handleInput}*/
 						onChange={this.props.searchVariants.bind(this)} />
-				<DropdownList inputedValue = {this.props.inputedValue} />	
+				<DropdownList inputedValue = {this.props.inputedValue} />
+				<Content />	
 			</div>
 
 		)
@@ -33,7 +36,7 @@ const mapDispatchToProps = dispatch => ({
 					fetch('https://v-tree.ru/api/autocomplete?w='+inputedValue)
 					.then(response => response.json())
 					.then(responseData => {
-						console.log("responseData", responseData);
+						// console.log("responseData", responseData);
 						dispatch({type:'DROP_LIST', payload:responseData});
 
 					})

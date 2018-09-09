@@ -1,6 +1,7 @@
 const initialState = {
 	searchProcess:false,
-	inputedValue:''
+	inputedValue:'',
+	content:''
 
 }
 export function autocompleteReducer(state = initialState, action) {
