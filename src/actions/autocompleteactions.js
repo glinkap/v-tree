@@ -1,14 +1,13 @@
 export const search = () => ({type: 'SEARCH'});
 
-export const showContent = (link) => dispatch => {
+export const showContent = ({link,drop}) => dispatch => {
 	fetch('https://v-tree.ru' + link)
 	.then(response => response.json())
 	.then(responseData => {
-		// console.log("responseData", responseData);
 		dispatch({	type:'SHOW_CONTENT', 
 					payload:{
 						isVisible:true,
-						data:responseData.content + link
+						data:'это контент -' + responseData.content + ' ' + link 
 					}
 				});
 
