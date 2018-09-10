@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../../actions/autocompleteActions'; 
 import {bindActionCreators} from 'redux';
+import { showContent } from '../../actions/autocompleteActions';
 class ButtonTag extends Component {
+
 	constructor() {
 		super();
 		this.clickFunc = this.clickFunc.bind(this);
@@ -16,7 +18,9 @@ class ButtonTag extends Component {
 	}
 }
 const mapDispatchToProps = (dispatch) => ({
-		showContent2:bindActionCreators(actions.showContent, dispatch)
+		showContent2: (e) => {
+			dispatch(showContent(e));
+		}
 })
 const mapStateToProps = (state) => ({
 	autocompleteReducer:state.autocompleteReducer

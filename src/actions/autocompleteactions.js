@@ -1,21 +1,16 @@
-export const search = () => ({type: 'SEARCH'})
-export const showContent = (z1,dispatch) => {
-	console.log("z1", z1);
-	console.log("dispatch", dispatch);
-	// showzz:dispatch(getContent(dispatch, this.link))	
-	
-}
+export const search = () => ({type: 'SEARCH'});
 
-
-const getContent = (dispatch)=> {
-	fetch('https://v-tree.ru' + this.link)
+export const showContent = (e) => dispatch => {
+	console.log("e", e);
+	console.log("this.link", this.link);
+	fetch('https://v-tree.ru' + "/api/detail?id=7")
 	.then(response => response.json())
 	.then(responseData => {
 		// console.log("responseData", responseData);
 		dispatch({	type:'SHOW_CONTENT', 
 					payload:{
 						isVisible:true,
-						data:responseData
+						data:responseData.content
 					}
 				});
 
@@ -23,4 +18,6 @@ const getContent = (dispatch)=> {
 	.catch(error => {
 			console.log('Error fetching and parsing data', error);
 	}) 
+		
 }
+

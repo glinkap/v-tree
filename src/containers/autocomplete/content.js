@@ -6,8 +6,7 @@ class Content extends Component {
 	render() {
 		{
 			if (this.props.contentReducer.isVisible === true) {
-				return <div>контент</div>
-				
+				return <div>{this.props.contentReducer.data}</div>	
 			} else {
 				return <div>нулина</div>
 			}
