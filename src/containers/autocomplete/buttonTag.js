@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import * as actions from '../../actions/autocompleteActions'; 
+import * as actions from '../../actions/autocompleteactions'; 
 import {bindActionCreators} from 'redux';
-import { showContent } from '../../actions/autocompleteActions';
 class ButtonTag extends Component {
 	render() {
 		return <div className='listItem' onClick={this.props.clickFunc.bind( this, {link:this.props.link} )}>{this.props.text}</div>
@@ -10,7 +9,7 @@ class ButtonTag extends Component {
 }
 const mapDispatchToProps = (dispatch) => ({
 		clickFunc: ({link}) => {
-			dispatch(showContent({link}));
+			dispatch(actions.showContent({link}));
 		}
 })
 const mapStateToProps = (state) => ({
