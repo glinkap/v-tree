@@ -31,14 +31,12 @@ const mapDispatchToProps = dispatch => ({
 					type: 'ON_CHANGE',
 					payload: inputedValue
 				});
-				dispatch({type:'DROP_LIST_CLEAR'});
 				if (inputedValue.length > 2) {
+					dispatch({type:'HIDE_CONTENT', payload:{isVisible:false}});
 					fetch('https://v-tree.ru/api/autocomplete?w='+inputedValue)
 					.then(response => response.json())
 					.then(responseData => {
-						// console.log("responseData", responseData);
 						dispatch({type:'DROP_LIST', payload:responseData});
-
 					})
 					.catch(error => {
        					console.log('Error fetching and parsing data', error);

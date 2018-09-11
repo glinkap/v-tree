@@ -4,8 +4,8 @@ import ButtonTag from './buttonTag';
 
 class DropdownListComp extends Component {
 	render() {
-		if (this.props.dropListReducer.clear) {
-			return  this.props.inputedValue =='' ? null : <p className='small'>Ничего не найдено</p>
+		if (this.props.dropListReducer.isVisible) {
+			return  this.props.inputedValue ==='' ? null : <p className='small'>Ничего не найдено</p>
 		} else {
 			const listItems = this.props.dropListReducer.data.map((item, index) => {
 				return <ButtonTag key={index.toString()} text={item.text} link={item.link} />

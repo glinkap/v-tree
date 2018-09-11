@@ -9,6 +9,11 @@ export function contentReducer(state = initialState, action) {
 			return {
 				...state, isVisible: action.payload.isVisible, data: action.payload.data
 			} 
+		} 
+		case 'HIDE_CONTENT': {
+			return {
+				...state, isVisible: action.payload.isVisible
+			} 
 		} 		
 		default: return state;
 	}

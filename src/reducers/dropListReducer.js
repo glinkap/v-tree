@@ -1,6 +1,6 @@
 const initialState = {
 	data:[],
-	clear:false	
+	isVisible:false	
 }
 
 export default function dropListReducer (state = initialState, action) {
@@ -8,14 +8,14 @@ export default function dropListReducer (state = initialState, action) {
 		case 'DROP_LIST' : {
 			
 			return {
-				...state, data: action.payload.list, clear: action.payload.list.length ? false : true
+				...state, data: action.payload.list, isVisible: action.payload.list.length ? false : true
 			}
 		} 
-		case 'DROP_LIST_CLEAR' : {
+		/*case 'DROP_LIST_CLEAR' : {
 			return {
-				...state, clear:true
+				...state, isVisible:true
 			}
-		} 
+		}*/ 
 		default: return state
 	}
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../../actions/autocompleteactions'; 
-import {bindActionCreators} from 'redux';
+// import {bindActionCreators} from 'redux';
 class ButtonTag extends Component {
 	render() {
 		return <div className='listItem' onClick={this.props.clickFunc.bind( this, {link:this.props.link} )}>{this.props.text}</div>
