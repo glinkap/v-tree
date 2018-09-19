@@ -10,6 +10,11 @@ export function autocompleteReducer(state = initialState, action) {
 			return {
 				...state, inputedValue: action.payload,
 			} 
+		} 
+		case 'CLEAR_INPUT': {
+			return {
+				...state, inputedValue: '',
+			} 
 		} 		
 		default: return state;
 	}

@@ -21,7 +21,7 @@ export const DropdownList = connect(state => ({dropListReducer:state.dropListRed
 
 
 
-export const Hok = function list(Tag) {
+/*export const Hok = function list(Tag) {
 	return class extends Component {
 		constructor() {
 			super()
@@ -37,4 +37,4 @@ export const Hok = function list(Tag) {
 					</div>	
 		}
 	}
-}
+}*/

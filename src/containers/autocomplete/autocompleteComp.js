@@ -4,16 +4,25 @@ import { connect } from 'react-redux';
 import { DropdownList } from './dropdownList';
 import './autocomplete.css';
 import Content from './content';
- 
+import InputCross from '../../components/inputCross';
 
 class Autocomplete extends Component {
+	clear() {
+		this.input.value = '';
+		this.props.clearInput();
+		this.input.focus();
+
+	}
 	render() {
 		return (
 			<div className="autocomplete">
-				<input	placeholder="Введите проблему" 
-						className="autocomplete-input" 
-						/*ref={this.handleInput}*/
-						onChange={this.props.searchVariants.bind(this)} />
+				<div className="inputWrapper">
+					<input	placeholder="Введите проблему" 
+							className="autocomplete-input" 
+							ref={el => this.input = el}
+							onChange={this.props.searchVariants.bind(this)} />
+					<InputCross onClick={this.clear.bind(this)} />
+				</div>	
 				<DropdownList inputedValue = {this.props.inputedValue} />
 				<Content />	
 			</div>
@@ -26,7 +35,6 @@ const mapDispatchToProps = dispatch => ({
 		const getVariants = () => {
 			return (dispatch) => {
 				const inputedValue = e.target.value;
-				// this.props.inputedValue = inputedValue;
 				dispatch({
 					type: 'ON_CHANGE',
 					payload: inputedValue
@@ -56,6 +64,7 @@ const mapDispatchToProps = dispatch => ({
 			
 		}
 	},
+	clearInput: () => dispatch({type:'CLEAR_INPUT'})
 });
 const mapStateToProps = (state) => {
 	return { handleInput: this.handleInput}
