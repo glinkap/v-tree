@@ -10,6 +10,7 @@ class ButtonTag extends Component {
 const mapDispatchToProps = (dispatch) => ({
 		clickFunc: ({link}) => {
 			dispatch(actions.showContent({link}));
+			dispatch({type:'TAG_SELECTED'});
 		}
 })
 const mapStateToProps = (state) => ({
