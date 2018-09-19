@@ -7,7 +7,6 @@ const initialState = {
 export default function dropListReducer (state = initialState, action) {
 	switch(action.type) {
 		case 'DROP_LIST' : {
-				console.log("data", action.payload.list);
 			const data = action.payload.list.map((item,index) => {
 				return {...item, index:index}
 			});
