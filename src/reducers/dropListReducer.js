@@ -1,21 +1,25 @@
 const initialState = {
 	data:[],
-	isVisible:false	
+	isVisible:false,
+	selected:null	
 }
 
 export default function dropListReducer (state = initialState, action) {
 	switch(action.type) {
 		case 'DROP_LIST' : {
-			
+				console.log("data", action.payload.list);
+			const data = action.payload.list.map((item,index) => {
+				return {...item, index:index}
+			});
 			return {
-				...state, data: action.payload.list, isVisible: action.payload.list.length ? false : true
+				...state, data: data, isVisible: action.payload.list.length ? false : true
 			}
 		} 
-		/*case 'DROP_LIST_CLEAR' : {
+		case 'TAG_SELECTED' : {
 			return {
-				...state, isVisible:true
+				...state, selected: action.payload.index
 			}
-		}*/ 
+		}
 		default: return state
 	}
 

@@ -8,15 +8,29 @@ class DropdownListComp extends Component {
 			return  this.props.inputedValue ==='' ? null : <p className='small'>Ничего не найдено</p>
 		} else {
 			const listItems = this.props.dropListReducer.data.map((item, index) => {
-				return <ButtonTag key={index.toString()} text={item.text} link={item.link} />
+				return <ButtonTag 	key={index.toString()} 
+									text={item.text} 
+									link={item.link} 
+									index={item.index}
+									selected={this.props.dropListReducer.selected == index ? 'selected' : '' } />
 			})
 			return <ul className="autocomplete-ul">{listItems}</ul>			
 		}
 			
 	}
 }
-export const DropdownList = connect(state => ({dropListReducer:state.dropListReducer,
-												inputedValue:state.autocompleteReducer.inputedValue}), dispatch =>({}))(DropdownListComp);
+function mapStateToProps (state) {
+	return {
+		dropListReducer:state.dropListReducer,
+		inputedValue:state.autocompleteReducer.inputedValue
+	}
+}
+function mapDispatchToProps () {
+	return dispatch => {
+		return {}
+	}
+}
+export const DropdownList = connect(mapStateToProps, mapDispatchToProps)(DropdownListComp);
 
 
 
