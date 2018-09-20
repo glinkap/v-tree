@@ -20,15 +20,14 @@ class Content extends Component {
 		return randomInteger(0,360);
 	}
 	VitaminsMaped() {
-		if (Array.isArray(this.props.vitamins)) {
+		if (Array.isArray(this.props.vitamins)) {			
 			return this.props.vitamins.map((item,i) => <Vitamin key={i} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} />)
 		}	else {return null;}
 	}
 		
 	render() {
 		return (<div> 
-					{contentInfo.call(this)}
-			
+					{contentInfo.call(this)}			
 					{this.VitaminsMaped()}
 				</div>)		
 	}
