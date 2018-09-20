@@ -1,5 +1,6 @@
 .vitamin {
-	width: 160px;
+	width: 70px;
+	height: 70px;
 }
 #blured {
 	-webkit-filter: blur(10px);

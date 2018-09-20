@@ -9,12 +9,19 @@ function contentInfo() {
 		return <div>Hide Content on Change input</div>
 	}
 }
-
+const randomInteger = (min, max) => {
+    var rand = min + Math.random() * (max + 1 - min);
+    rand = Math.floor(rand);
+    return rand;
+};
 
 class Content extends Component {
+	random() {
+		return randomInteger(0,360);
+	}
 	VitaminsMaped() {
 		if (Array.isArray(this.props.vitamins)) {
-			return this.props.vitamins.map((item,i) => <Vitamin key={i} className='vitamin' vitaminname={item.name} />)
+			return this.props.vitamins.map((item,i) => <Vitamin key={i} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} />)
 		}	else {return null;}
 	}
 		

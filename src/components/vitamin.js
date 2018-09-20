@@ -1,8 +1,14 @@
 import React from 'react';
 import './vitamin.css';
+const colorEdge = (hue) => {
+	if (hue > 360) {
+		hue = hue - 360;
+	}
+	return `hsl(${hue},100%,50%)`;
+}
 
-const Vitamin = props => (
-   <svg
+const Vitamin = props => {
+   return <svg
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 98.65 98.65"
     {...props}
@@ -13,19 +19,17 @@ const Vitamin = props => (
     </filter>
       <linearGradient
         id="b"
-        data-name="New Gradient Swatch 3"
         x1={17.8}
         y1={49.32}
         x2={80.85}
         y2={49.32}
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset={0} stopColor="#ffbc46" />
-        <stop offset={0.99} stopColor="#fd4e00" />
+        <stop offset={0} stopColor={colorEdge(props.hue)} />
+        <stop offset={0.99} stopColor={colorEdge(props.hue)} />
       </linearGradient>
       <radialGradient
         id="a"
-        data-name="New Gradient Swatch 2"
         cx={78.57}
         cy={62.82}
         r={64.95}
@@ -80,9 +84,8 @@ const Vitamin = props => (
         <stop offset={0.63} stopColor="#fff" stopOpacity={0.01} />
         <stop offset={1} stopColor="#fff" stopOpacity={0} />
       </radialGradient>      
-    </defs>
-    <title>vitamin-tree</title>
-    <circle cx={58.81} cy={55.32} r={28.83} fill="#fd4c00" filter="url(#blur1)"  />
+    </defs> 
+    <circle cx={58.81} cy={55.32} r={28.83} fill={colorEdge(props.hue)} filter="url(#blur1)"  />
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#b)" />
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#a)" />
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#c)" />
@@ -112,6 +115,6 @@ const Vitamin = props => (
       />
     </g>
   </svg>
-)
+}
 
 export default Vitamin
