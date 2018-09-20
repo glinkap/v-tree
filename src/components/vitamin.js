@@ -92,7 +92,7 @@ const Vitamin = props => (
       fill="#fff"
       fontFamily="Franklin Gothic Medium"
     >
-      {this.props ? this.props.text : 'B'}
+      {props.vitaminname}
     </text>
     <g>
       <path

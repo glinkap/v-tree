@@ -5,7 +5,6 @@ import { DropdownList } from './dropdownList';
 import './autocomplete.css';
 import Content from './content';
 import InputCross from '../../components/inputCross';
-import Vitamin from '../../components/vitamin';
 
 class Autocomplete extends Component {
 	clear() {
@@ -26,7 +25,7 @@ class Autocomplete extends Component {
 				</div>	
 				<DropdownList inputedValue = {this.props.inputedValue} />
 				<Content />	
-				<Vitamin className='vitamin'/>
+				
 			</div>
 
 		)

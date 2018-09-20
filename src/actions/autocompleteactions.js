@@ -7,7 +7,8 @@ export const showContent = ({link,drop}) => dispatch => {
 		dispatch({	type:'SHOW_CONTENT', 
 					payload:{
 						isVisible:true,
-						data:'это контент -' + responseData.content + ' ' + link 
+						content:responseData.content,
+						vitamins: responseData.vitamins
 					}
 				});
 
