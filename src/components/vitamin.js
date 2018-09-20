@@ -25,7 +25,7 @@ const Vitamin = props => {
         y2={49.32}
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset={0} stopColor={colorEdge(props.hue)} />
+        <stop offset={0} stopColor="#ffbc46" />
         <stop offset={0.99} stopColor={colorEdge(props.hue)} />
       </linearGradient>
       <radialGradient
