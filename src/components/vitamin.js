@@ -57,8 +57,11 @@ const Vitamin = props => {
         y1={2014.87}
         x2={785.34}
         y2={2014.87}
-        xlinkHref={`url(#${unicIdResult})`}
-      />
+        gradientUnits="userSpaceOnUse"
+      >
+      <stop offset={0} stopColor="#ffbc46" />
+        <stop offset={0.99} stopColor={colorEdge(props.hue)} />
+      </linearGradient>
       <radialGradient
         id="e"
         cx={774.63}
@@ -93,29 +96,28 @@ const Vitamin = props => {
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#c)" />
     <text
       transform="translate(35.64 63.2)"
-      fontSize={45.05}
+      fontSize={25.05}
       fill="#fff"
       fontFamily="Franklin Gothic Medium"
+      transform="translate(41 58)"
     >
       {props.vitaminname}
     </text>
-    <g>
-      <path
-        d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
-        transform="translate(-686.69 -1965.54)"
-        fill={`url(#${unicIdResult2})`}
-      />
-      <path
-        d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
-        transform="translate(-686.69 -1965.54)"
-        fill="url(#e)"
-      />
-      <path
-        d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
-        transform="translate(-686.69 -1965.54)"
-        fill="url(#f)"
-      />
-    </g>
+    <path
+      d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
+      transform="translate(-686.69 -1965.54)"
+      fill={`url(#${unicIdResult2})`}
+    />
+    <path
+      d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
+      transform="translate(-686.69 -1965.54)"
+      fill="url(#e)"
+    />
+    <path
+      d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
+      transform="translate(-686.69 -1965.54)"
+      fill="url(#f)"
+    />
   </svg>
 }
 
