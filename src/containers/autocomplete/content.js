@@ -21,7 +21,7 @@ class Content extends Component {
 	}
 	VitaminsMaped() {
 		if (Array.isArray(this.props.vitamins)) {			
-			return this.props.vitamins.map((item,i) => <Vitamin key={i} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} />)
+			return this.props.vitamins.map((item,i) => <Vitamin key={i} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} vitaminindex={item.vitamin.index} />)
 		}	else {return null;}
 	}
 		

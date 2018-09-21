@@ -6,3 +6,9 @@
 	-webkit-filter: blur(10px);
 	filter: blur(10px)
 }
+.vitamin-name {
+	font-weight: bold;
+}
+.vitamin-index {
+	font-weight: bold;
+}

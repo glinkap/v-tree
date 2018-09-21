@@ -98,10 +98,18 @@ const Vitamin = props => {
       transform="translate(35.64 63.2)"
       fontSize={25.05}
       fill="#fff"
-      fontFamily="Franklin Gothic Medium"
       transform="translate(41 58)"
+      className="vitamin-index"
     >
       {props.vitaminname}
+    </text>
+    <text
+      transform="translate(58 50)"
+      fontSize={20}
+      fill="#fff"
+      className="vitamin-index"
+    >
+      {props.vitaminindex}
     </text>
     <path
       d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
