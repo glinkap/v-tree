@@ -6,8 +6,10 @@ const colorEdge = (hue) => {
 	}
 	return `hsl(${hue},100%,50%)`;
 }
-
 const Vitamin = props => {
+    const unicId = () => `d${Math.floor(Math.random()*360)}`;
+    const unicIdResult = unicId();
+    const unicIdResult2 = unicId();
    return <svg
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 98.65 98.65"
@@ -18,7 +20,7 @@ const Vitamin = props => {
     	<feGaussianBlur in="SourceGraphic" stdDeviation="4" />
     </filter>
       <linearGradient
-        id="b"
+        id={unicIdResult}
         x1={17.8}
         y1={49.32}
         x2={80.85}
@@ -50,12 +52,12 @@ const Vitamin = props => {
       </radialGradient>
       <radialGradient id="c" cx={31.07} cy={23.82} r={64.95} xlinkHref="#a" />
       <linearGradient
-        id="d"
+        id={unicIdResult2}
         x1={686.69}
         y1={2014.87}
         x2={785.34}
         y2={2014.87}
-        xlinkHref="#b"
+        xlinkHref={`url(#${unicIdResult})`}
       />
       <radialGradient
         id="e"
@@ -86,7 +88,7 @@ const Vitamin = props => {
       </radialGradient>      
     </defs> 
     <circle cx={58.81} cy={55.32} r={28.83} fill={colorEdge(props.hue)} filter="url(#blur1)"  />
-    <circle cx={49.32} cy={49.32} r={31.52} fill="url(#b)" />
+    <circle cx={49.32} cy={49.32} r={31.52} fill={`url(#${unicIdResult})`} />
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#a)" />
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#c)" />
     <text
@@ -101,7 +103,7 @@ const Vitamin = props => {
       <path
         d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
         transform="translate(-686.69 -1965.54)"
-        fill="url(#d)"
+        fill={`url(#${unicIdResult2})`}
       />
       <path
         d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
