@@ -3,16 +3,19 @@ import { connect } from 'react-redux';
 import ButtonTag from './buttonTag';
 
 class DropdownListComp extends Component {
+	componentWillReceiveProps() {
+		
+	}
 	render() {
-		if (this.props.dropListReducer.isVisible) {
-			return  this.props.inputedValue ==='' ? null : <p className='small'>Ничего не найдено</p>
+		if (!this.props.isVisible) {
+			return  this.props.inputedValue ==='' ? <p></p>: <p className='small'>Ничего не найдено</p>
 		} else {
-			const listItems = this.props.dropListReducer.data.map((item, index) => {
+			const listItems = this.props.data.map((item, index) => {
 				return <ButtonTag 	key={index.toString()} 
 									text={item.text} 
 									link={item.link} 
 									index={item.index}
-									selected={this.props.dropListReducer.selected == index ? 'selected' : '' } />
+									selected={this.props.selected == index ? 'selected' : '' } />
 			})
 			return <ul className="autocomplete-ul">{listItems}</ul>			
 		}
@@ -21,7 +24,7 @@ class DropdownListComp extends Component {
 }
 function mapStateToProps (state) {
 	return {
-		dropListReducer:state.dropListReducer,
+		...state.dropListReducer,
 		inputedValue:state.autocompleteReducer.inputedValue
 	}
 }

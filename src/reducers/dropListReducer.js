@@ -11,12 +11,17 @@ export default function dropListReducer (state = initialState, action) {
 				return {...item, index:index}
 			});
 			return {
-				...state, data: data, isVisible: action.payload.list.length ? false : true
+				...state, data, isVisible: action.payload.list.length ? true : false
 			}
 		} 
 		case 'TAG_SELECTED' : {
 			return {
 				...state, selected: action.payload.index
+			}
+		}
+		case 'HIDE_DROP_LIST' : {
+			return {
+				...state, isVisible:false
 			}
 		}
 		default: return state

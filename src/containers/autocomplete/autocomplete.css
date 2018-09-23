@@ -108,4 +108,23 @@ p {
 .autocomplete-ul .small {
 	font-size: 16px;
 }
-
+.autocomplete-content {
+    border: 1px solid #FDCB34;	
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.vitamins-block {
+	padding: 0 20px;
+	margin-bottom: 20px;
+}
+.vitamin {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}

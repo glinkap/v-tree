@@ -95,7 +95,6 @@ const Vitamin = props => {
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#a)" />
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#c)" />
     <text
-      transform="translate(35.64 63.2)"
       fontSize={25.05}
       fill="#fff"
       transform="translate(41 58)"

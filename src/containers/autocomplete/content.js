@@ -26,10 +26,16 @@ class Content extends Component {
 	}
 		
 	render() {
-		return (<div> 
-					{contentInfo.call(this)}			
-					{this.VitaminsMaped()}
-				</div>)		
+		if (this.props.isVisible) {
+			return (
+				<div>
+			<div>{this.props.data}</div>	
+			<div className="autocomplete-content">{this.props.content}</div>			
+			<div className="vitamins-block">{this.VitaminsMaped()}</div>
+			</div>)
+		} else {
+			return<div>{this.props.inputedValue == '' ? 'Введите в поиск проблему' : null }</div>
+		}					
 	}
 }
 

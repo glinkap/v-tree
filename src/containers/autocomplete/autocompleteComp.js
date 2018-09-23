@@ -12,6 +12,7 @@ class Autocomplete extends Component {
 		this.props.clearInput();
 		this.input.focus();
 
+
 	}
 	render() {
 		return (
@@ -40,8 +41,8 @@ const mapDispatchToProps = dispatch => ({
 					type: 'ON_CHANGE',
 					payload: inputedValue
 				});
+				dispatch({type:'HIDE_CONTENT', payload:{isVisible:false}});
 				if (inputedValue.length > 2) {
-					dispatch({type:'HIDE_CONTENT', payload:{isVisible:false}});
 					fetch('https://v-tree.ru/api/autocomplete?w='+inputedValue)
 					.then(response => response.json())
 					.then(responseData => {
@@ -61,11 +62,16 @@ const mapDispatchToProps = dispatch => ({
 			dispatch({
 				type: 'ON_CHANGE',
 				payload: inputedValue
-			})
+			});
 			
 		}
 	},
-	clearInput: () => dispatch({type:'CLEAR_INPUT'})
+	clearInput: () => {
+		dispatch({type:'CLEAR_INPUT'});
+		dispatch({type:'HIDE_CONTENT', payload:{isVisible:false}});
+		dispatch({type:'HIDE_DROP_LIST'})
+
+	}
 });
 const mapStateToProps = (state) => {
 	return { handleInput: this.handleInput}
