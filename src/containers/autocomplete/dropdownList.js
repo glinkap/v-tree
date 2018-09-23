@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import ButtonTag from './buttonTag';
 
 class DropdownListComp extends Component {
-	componentWillReceiveProps() {
-		
-	}
+	// componentWillReceiveProps() {
+
+	// }
 	render() {
 		if (!this.props.isVisible) {
-			return  this.props.inputedValue ==='' ? <p></p>: <p className='small'>Ничего не найдено</p>
+			return  this.props.inputedValue ==='' ? <p>Введите что то </p>: <p className='small'>Ничего не найдено</p>
 		} else {
 			const listItems = this.props.data.map((item, index) => {
 				return <ButtonTag 	key={index.toString()} 

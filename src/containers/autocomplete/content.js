@@ -16,12 +16,19 @@ const randomInteger = (min, max) => {
 };
 
 class Content extends Component {
+	constructor() {
+		super();
+		this.showProduct = this.showProduct.bind(this);
+	}
+	showProduct (e) {
+		this.props.showProduct(e);
+	}
 	random() {
 		return randomInteger(0,360);
 	}
 	VitaminsMaped() {
 		if (Array.isArray(this.props.vitamins)) {			
-			return this.props.vitamins.map((item,i) => <Vitamin key={i} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} vitaminindex={item.vitamin.index} />)
+			return this.props.vitamins.map((item,i) => <Vitamin key={i} onClick={this.showProduct} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} vitaminindex={item.vitamin.index} />)
 		}	else {return null;}
 	}
 		
@@ -39,7 +46,12 @@ class Content extends Component {
 	}
 }
 
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = (dispatch) => ({
+	showProduct: (e) => {
+		console.log("e", e.currentTarget);
+
+	} 
+});
 const mapStateToProps = (state) => ({
 	...state.contentReducer,
 });
