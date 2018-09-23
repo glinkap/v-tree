@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Vitamin from '../../components/vitamin';
+import Products from '../../components/products';
 
 function contentInfo() {
 	if (this.props.isVisible) {
@@ -21,14 +22,14 @@ class Content extends Component {
 		this.showProduct = this.showProduct.bind(this);
 	}
 	showProduct (e) {
-		this.props.showProduct(e);
+		this.props.showProduct({e});
 	}
 	random() {
 		return randomInteger(0,360);
 	}
 	VitaminsMaped() {
 		if (Array.isArray(this.props.vitamins)) {			
-			return this.props.vitamins.map((item,i) => <Vitamin key={i} onClick={this.showProduct} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} vitaminindex={item.vitamin.index} />)
+			return this.props.vitamins.map((item,i) => <Vitamin key={i} onClick={this.props.showProduct.bind(Vitamin,{selectedIndex:i})} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} vitaminindex={item.vitamin.index} />)
 		}	else {return null;}
 	}
 		
@@ -39,6 +40,7 @@ class Content extends Component {
 			<div>{this.props.data}</div>	
 			<div className="autocomplete-content">{this.props.content}</div>			
 			<div className="vitamins-block">{this.VitaminsMaped()}</div>
+			<Products />
 			</div>)
 		} else {
 			return<div>{this.props.inputedValue == '' ? 'Введите в поиск проблему' : null }</div>
@@ -47,8 +49,8 @@ class Content extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-	showProduct: (e) => {
-		console.log("e", e.currentTarget);
+	showProduct: ({selectedIndex}) => {
+		dispatch({type:'SHOW_PRODUCT', payload:{selectedIndex}})
 
 	} 
 });

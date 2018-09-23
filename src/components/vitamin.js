@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './vitamin.css';
 const colorEdge = (hue) => {
 	if (hue > 360) {
@@ -6,14 +6,15 @@ const colorEdge = (hue) => {
 	}
 	return `hsl(${hue},100%,50%)`;
 }
-const Vitamin = props => {
+class Vitamin extends Component {
+	render() {
     const unicId = () => `d${Math.floor(Math.random()*360)}`;
     const unicIdResult = unicId();
     const unicIdResult2 = unicId();
    return <svg
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 98.65 98.65"
-    {...props}
+    {...this.props}
   >
     <defs>
     <filter id="blur1" x="0" y="0">
@@ -28,7 +29,7 @@ const Vitamin = props => {
         gradientUnits="userSpaceOnUse"
       >
         <stop offset={0} stopColor="#ffbc46" />
-        <stop offset={0.99} stopColor={colorEdge(props.hue)} />
+        <stop offset={0.99} stopColor={colorEdge(this.props.hue)} />
       </linearGradient>
       <radialGradient
         id="a"
@@ -60,7 +61,7 @@ const Vitamin = props => {
         gradientUnits="userSpaceOnUse"
       >
       <stop offset={0} stopColor="#ffbc46" />
-        <stop offset={0.99} stopColor={colorEdge(props.hue)} />
+        <stop offset={0.99} stopColor={colorEdge(this.props.hue)} />
       </linearGradient>
       <radialGradient
         id="e"
@@ -90,7 +91,7 @@ const Vitamin = props => {
         <stop offset={1} stopColor="#fff" stopOpacity={0} />
       </radialGradient>      
     </defs> 
-    <circle cx={58.81} cy={55.32} r={28.83} fill={colorEdge(props.hue)} filter="url(#blur1)"  />
+    <circle cx={58.81} cy={55.32} r={28.83} fill={colorEdge(this.props.hue)} filter="url(#blur1)"  />
     <circle cx={49.32} cy={49.32} r={31.52} fill={`url(#${unicIdResult})`} />
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#a)" />
     <circle cx={49.32} cy={49.32} r={31.52} fill="url(#c)" />
@@ -100,7 +101,7 @@ const Vitamin = props => {
       transform="translate(41 58)"
       className="vitamin-index"
     >
-      {props.vitaminname}
+      {this.props.vitaminname}
     </text>
     <text
       transform="translate(58 50)"
@@ -108,7 +109,7 @@ const Vitamin = props => {
       fill="#fff"
       className="vitamin-index"
     >
-      {props.vitaminindex}
+      {this.props.vitaminindex}
     </text>
     <path
       d="M736 2064.19a49.32 49.32 0 1 1 49.32-49.32 49.38 49.38 0 0 1-49.32 49.32zm0-90.49a41.17 41.17 0 1 0 41.17 41.17A41.21 41.21 0 0 0 736 1973.7z"
@@ -127,5 +128,5 @@ const Vitamin = props => {
     />
   </svg>
 }
-
+}
 export default Vitamin
