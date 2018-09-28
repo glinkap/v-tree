@@ -1,0 +1,13 @@
+/*.content-wrap {
+	border: 1px solid #FDCB34;
+	padding: 20px;
+}*/
+.autocomplete-content-header {
+	padding: 20px 0;
+}
+.autocomplete-content {
+    border: 1px solid #FDCB34;	
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

@@ -36,11 +36,11 @@ class Content extends Component {
 	render() {
 		if (this.props.isVisible) {
 			return (
-				<div>
-			<div>{this.props.data}</div>	
-			<div className="autocomplete-content">{this.props.content}</div>			
-			<div className="vitamins-block">{this.VitaminsMaped()}</div>
-			<Products />
+			<div className="autocomplete-content">
+				<div>{this.props.data}</div>	
+				<div className="autocomplete-content-header">{this.props.content}</div>			
+				<div className="vitamins-block">{this.VitaminsMaped()}</div>
+				<Products />
 			</div>)
 		} else {
 			return<div>{this.props.inputedValue == '' ? 'Введите в поиск проблему' : null }</div>
