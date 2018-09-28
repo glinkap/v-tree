@@ -29,7 +29,7 @@ class Content extends Component {
 	}
 	VitaminsMaped() {
 		if (Array.isArray(this.props.vitamins)) {			
-			return this.props.vitamins.map((item,i) => <Vitamin key={i} onClick={this.props.showProduct.bind(Vitamin,{selectedIndex:i})} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} vitaminindex={item.vitamin.index} />)
+			return this.props.vitamins.map((item,i) => <Vitamin key={i} onClick={this.props.showProduct.bind(Vitamin,{selectedIndex:item.id})} className='vitamin' hue={randomInteger(0,360)} vitaminname={item.name} vitaminindex={item.vitamin.index} />)
 		}	else {return null;}
 	}
 		
@@ -50,12 +50,13 @@ class Content extends Component {
 
 const mapDispatchToProps = (dispatch) => ({
 	showProduct: ({selectedIndex}) => {
-		dispatch({type:'SHOW_PRODUCT', payload:{selectedIndex}})
+		dispatch({type:'SHOW_PRODUCT', payload:{selectedIndex}});
 
 	} 
 });
 const mapStateToProps = (state) => ({
 	...state.contentReducer,
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);

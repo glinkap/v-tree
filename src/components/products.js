@@ -1,33 +1,39 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import {productsSelector} from '../selectors/autocompleteSelectors.js';
 class Products extends Component {
-	render() {
-		if (this.props.isVisible && this.props.selectedIndex !== undefined) {
-			let productsList,
-			data,
-			selectedVitamin,
-			selectedIndex;
-			data = this.props.data;
-			selectedIndex = this.props.selectedIndex;
-			selectedVitamin = data[selectedIndex];
-			productsList = selectedVitamin.products
-			console.log("data", data,'selectedIndex',selectedIndex,'selectedVitamin',selectedVitamin,'productsList',productsList);
+	// shouldComponentUpdate(props) {
+	// 	// if (!isNaN(props.selectedIndex)) {
+	// 	// 	const vitamin = props.data.filter(item => item.id == props.selectedIndex)[0];
+	// 	// 	this.props.data = vitamin.products;
+	// 	// 	console.log("this.props.data", this.props.data);
+	// 	// 	return true;
 			
-			return <div className="products">
-				{	
-					productsList.map((item,i)=>{
+	// 	// } else {
+	// 	// 	return false;
+	// 	// }
+		
+	// }
+	componentWillReceiveProps(props) {
+	}
+	render() {
+		if (!isNaN(this.props.selectedIndex)) {
+			const vitamin = this.props.data.filter(item => item.id == this.props.selectedIndex)[0];
+			return (<div className="products">
+				{		
+					vitamin.products.map((item,i)=>{
 					return <div key={i}>{item.product.name} - {item.product.id}</div>
-				})}
-			</div>
-		} else {
-			return null;
-		}
+					})
+				}
+			</div>)
+			
+		} else {return null;}
 
 	}
 }
 const mapStateToProps = (state) => ({
 	...state.productReducer,
-	data: state.contentReducer.vitamins
+	data: productsSelector(state)
 });
 const mapDispatchToProps = (dispatch) => ({
 

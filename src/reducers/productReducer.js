@@ -1,6 +1,6 @@
 const initialState = {
 	isVisible:false,
-	selected:null	
+	selectedIndex:NaN
 }
 
 export default function dropListReducer (state = initialState, action) {
@@ -8,6 +8,11 @@ export default function dropListReducer (state = initialState, action) {
 		case 'SHOW_PRODUCT' : {
 						return {
 				...state, isVisible:true, selectedIndex:action.payload.selectedIndex, 
+			}
+		} 
+		case 'PRODUCT_INITIAL_STATE' : {
+						return {
+				...state, ...initialState 
 			}
 		} 
 		default: return state
