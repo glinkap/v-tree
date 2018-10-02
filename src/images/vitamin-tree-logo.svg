@@ -1,0 +1,511 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 502.65 237.98">
+  <defs>
+    <style>
+      .a {
+        font-size: 192.86px;
+      }
+
+      .a, .ag, .ao, .aw, .b, .be, .bn, .h, .p, .y {
+        font-family: Franklin Gothic Medium;
+      }
+
+      .b {
+        font-size: 106.96px;
+        fill: #26f300;
+      }
+
+      .c {
+        letter-spacing: -5.15px;
+      }
+
+      .d {
+        fill: #00fd84;
+      }
+
+      .e {
+        fill: url(#a);
+      }
+
+      .f {
+        fill: url(#b);
+      }
+
+      .g {
+        fill: url(#c);
+      }
+
+      .h {
+        font-size: 33.78px;
+      }
+
+      .ag, .ao, .aw, .be, .bf, .bn, .h, .p, .q, .y {
+        fill: #fff;
+      }
+
+      .i {
+        fill: url(#d);
+      }
+
+      .j {
+        fill: url(#e);
+      }
+
+      .k {
+        fill: url(#f);
+      }
+
+      .l {
+        fill: #260bfd;
+      }
+
+      .m {
+        fill: url(#g);
+      }
+
+      .n {
+        fill: url(#h);
+      }
+
+      .o {
+        fill: url(#i);
+      }
+
+      .p, .q {
+        font-size: 32.26px;
+      }
+
+      .bf, .q {
+        font-family: Gill Sans MT Condensed;
+      }
+
+      .r {
+        fill: url(#j);
+      }
+
+      .s {
+        fill: url(#k);
+      }
+
+      .t {
+        fill: url(#l);
+      }
+
+      .u {
+        fill: #00e0fd;
+      }
+
+      .v {
+        fill: url(#m);
+      }
+
+      .w {
+        fill: url(#n);
+      }
+
+      .x {
+        fill: url(#o);
+      }
+
+      .y {
+        font-size: 19.82px;
+      }
+
+      .z {
+        fill: url(#p);
+      }
+
+      .aa {
+        fill: url(#q);
+      }
+
+      .ab {
+        fill: url(#r);
+      }
+
+      .ac {
+        fill: #fdaa00;
+      }
+
+      .ad {
+        fill: url(#s);
+      }
+
+      .ae {
+        fill: url(#t);
+      }
+
+      .af {
+        fill: url(#u);
+      }
+
+      .ag {
+        font-size: 39.03px;
+      }
+
+      .ah {
+        fill: url(#v);
+      }
+
+      .ai {
+        fill: url(#w);
+      }
+
+      .aj {
+        fill: url(#x);
+      }
+
+      .ak {
+        fill: #16b0fd;
+      }
+
+      .al {
+        fill: url(#y);
+      }
+
+      .am {
+        fill: url(#z);
+      }
+
+      .an {
+        fill: url(#aa);
+      }
+
+      .ao {
+        font-size: 20.92px;
+      }
+
+      .ap {
+        fill: url(#ab);
+      }
+
+      .aq {
+        fill: url(#ac);
+      }
+
+      .ar {
+        fill: url(#ad);
+      }
+
+      .as {
+        fill: #fd0010;
+      }
+
+      .at {
+        fill: url(#ae);
+      }
+
+      .au {
+        fill: url(#af);
+      }
+
+      .av {
+        fill: url(#ag);
+      }
+
+      .aw {
+        font-size: 27.92px;
+      }
+
+      .ax {
+        fill: url(#ah);
+      }
+
+      .ay {
+        fill: url(#ai);
+      }
+
+      .az {
+        fill: url(#aj);
+      }
+
+      .ba {
+        fill: #fd4a16;
+      }
+
+      .bb {
+        fill: url(#ak);
+      }
+
+      .bc {
+        fill: url(#al);
+      }
+
+      .bd {
+        fill: url(#am);
+      }
+
+      .be {
+        font-size: 45.88px;
+      }
+
+      .bf {
+        font-size: 45px;
+      }
+
+      .bg {
+        fill: url(#an);
+      }
+
+      .bh {
+        fill: url(#ao);
+      }
+
+      .bi {
+        fill: url(#ap);
+      }
+
+      .bj {
+        fill: #97fd00;
+      }
+
+      .bk {
+        fill: url(#aq);
+      }
+
+      .bl {
+        fill: url(#ar);
+      }
+
+      .bm {
+        fill: url(#as);
+      }
+
+      .bn {
+        font-size: 26.63px;
+      }
+
+      .bo {
+        fill: url(#at);
+      }
+
+      .bp {
+        fill: url(#au);
+      }
+
+      .bq {
+        fill: url(#av);
+      }
+    </style>
+    <filter  id="blur">
+      <feGaussianBlur  stdDeviation="4"></feGaussianBlur>
+    </filter>
+    <linearGradient id="a" data-name="New Gradient Swatch 5" x1="48.69" y1="84.22" x2="95.97" y2="84.22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#46adff"/>
+      <stop offset="0.99" stop-color="#52fdae"/>
+    </linearGradient>
+    <radialGradient id="b" data-name="New Gradient Swatch 2" cx="94.27" cy="94.34" r="48.71" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0" stop-color="#fff" stop-opacity="0.99"/>
+      <stop offset="0.05" stop-color="#fff" stop-opacity="0.8"/>
+      <stop offset="0.1" stop-color="#fff" stop-opacity="0.63"/>
+      <stop offset="0.15" stop-color="#fff" stop-opacity="0.48"/>
+      <stop offset="0.21" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="0.27" stop-color="#fff" stop-opacity="0.24"/>
+      <stop offset="0.34" stop-color="#fff" stop-opacity="0.15"/>
+      <stop offset="0.42" stop-color="#fff" stop-opacity="0.08"/>
+      <stop offset="0.52" stop-color="#fff" stop-opacity="0.04"/>
+      <stop offset="0.66" stop-color="#fff" stop-opacity="0.01"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="c" cx="58.65" cy="65.09" r="48.71" xlink:href="#b"/>
+    <linearGradient id="d" x1="77.36" y1="384.99" x2="151.34" y2="384.99" xlink:href="#a"/>
+    <radialGradient id="e" cx="143.31" cy="401.92" r="83.11" xlink:href="#b"/>
+    <radialGradient id="f" cx="92.56" cy="359.92" r="83.11" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.01" stop-color="#fff" stop-opacity="0.96"/>
+      <stop offset="0.05" stop-color="#fff" stop-opacity="0.78"/>
+      <stop offset="0.09" stop-color="#fff" stop-opacity="0.61"/>
+      <stop offset="0.14" stop-color="#fff" stop-opacity="0.47"/>
+      <stop offset="0.2" stop-color="#fff" stop-opacity="0.34"/>
+      <stop offset="0.25" stop-color="#fff" stop-opacity="0.23"/>
+      <stop offset="0.32" stop-color="#fff" stop-opacity="0.15"/>
+      <stop offset="0.4" stop-color="#fff" stop-opacity="0.08"/>
+      <stop offset="0.49" stop-color="#fff" stop-opacity="0.03"/>
+      <stop offset="0.63" stop-color="#fff" stop-opacity="0.01"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g" data-name="New Gradient Swatch 10" x1="429.59" y1="111.22" x2="474.74" y2="111.22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c24eff"/>
+      <stop offset="0.99" stop-color="#6d59fd"/>
+    </linearGradient>
+    <radialGradient id="h" cx="473.11" cy="120.88" r="46.51" xlink:href="#b"/>
+    <radialGradient id="i" cx="439.1" cy="92.95" r="46.51" xlink:href="#b"/>
+    <linearGradient id="j" x1="458.86" y1="411.99" x2="529.51" y2="411.99" xlink:href="#g"/>
+    <radialGradient id="k" cx="521.84" cy="428.15" r="79.37" xlink:href="#b"/>
+    <radialGradient id="l" cx="473.38" cy="388.05" r="79.37" xlink:href="#f"/>
+    <linearGradient id="m" data-name="New Gradient Swatch 11" x1="467.09" y1="173.92" x2="494.82" y2="173.92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4353ff"/>
+      <stop offset="0.99" stop-color="#4ee5fd"/>
+    </linearGradient>
+    <radialGradient id="n" cx="493.82" cy="179.86" r="28.57" xlink:href="#b"/>
+    <radialGradient id="o" cx="472.93" cy="162.71" r="28.57" xlink:href="#b"/>
+    <linearGradient id="p" x1="501.28" y1="474.7" x2="544.67" y2="474.7" xlink:href="#m"/>
+    <radialGradient id="q" cx="539.96" cy="484.63" r="48.75" xlink:href="#b"/>
+    <radialGradient id="r" cx="510.19" cy="459.99" r="48.75" xlink:href="#f"/>
+    <linearGradient id="s" data-name="New Gradient Swatch 7" x1="142.27" y1="79.97" x2="196.9" y2="79.97" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff146"/>
+      <stop offset="0.99" stop-color="#fdc552"/>
+    </linearGradient>
+    <radialGradient id="t" cx="194.93" cy="91.67" r="56.28" xlink:href="#b"/>
+    <radialGradient id="u" cx="153.77" cy="57.87" r="56.28" xlink:href="#b"/>
+    <linearGradient id="v" x1="168.86" y1="380.74" x2="254.34" y2="380.74" xlink:href="#s"/>
+    <radialGradient id="w" cx="245.06" cy="400.3" r="96.03" xlink:href="#b"/>
+    <radialGradient id="x" cx="186.43" cy="351.77" r="96.03" xlink:href="#f"/>
+    <linearGradient id="y" data-name="New Gradient Swatch 6" x1="203.66" y1="22.91" x2="232.95" y2="22.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5b56ff"/>
+      <stop offset="0.99" stop-color="#61c6fd"/>
+    </linearGradient>
+    <radialGradient id="z" cx="231.89" cy="29.18" r="30.17" xlink:href="#b"/>
+    <radialGradient id="aa" cx="209.83" cy="11.06" r="30.17" xlink:href="#b"/>
+    <linearGradient id="ab" x1="237.42" y1="323.68" x2="283.23" y2="323.68" xlink:href="#y"/>
+    <radialGradient id="ac" cx="278.26" cy="334.16" r="51.47" xlink:href="#b"/>
+    <radialGradient id="ad" cx="246.83" cy="308.16" r="51.47" xlink:href="#f"/>
+    <linearGradient id="ae" data-name="New Gradient Swatch 8" x1="252.1" y1="62.91" x2="291.18" y2="62.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff5200"/>
+      <stop offset="0.99" stop-color="#fd003b"/>
+    </linearGradient>
+    <radialGradient id="af" cx="289.77" cy="71.28" r="40.26" xlink:href="#b"/>
+    <radialGradient id="ag" cx="260.33" cy="47.1" r="40.26" xlink:href="#b"/>
+    <linearGradient id="ah" x1="283.08" y1="363.68" x2="344.23" y2="363.68" xlink:href="#ae"/>
+    <radialGradient id="ai" cx="337.59" cy="377.67" r="68.7" xlink:href="#b"/>
+    <radialGradient id="aj" cx="295.65" cy="342.96" r="68.7" xlink:href="#f"/>
+    <linearGradient id="ak" data-name="New Gradient Swatch 9" x1="335.53" y1="62.57" x2="399.75" y2="62.57" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff9b16"/>
+      <stop offset="0.99" stop-color="#fd3a16"/>
+    </linearGradient>
+    <radialGradient id="al" cx="397.43" cy="76.33" r="66.16" xlink:href="#b"/>
+    <radialGradient id="am" cx="349.05" cy="36.6" r="66.16" xlink:href="#b"/>
+    <linearGradient id="an" x1="359.42" y1="363.35" x2="459.9" y2="363.35" xlink:href="#ak"/>
+    <radialGradient id="ao" cx="448.99" cy="386.34" r="112.88" xlink:href="#b"/>
+    <radialGradient id="ap" cx="380.07" cy="329.3" r="112.88" xlink:href="#f"/>
+    <linearGradient id="aq" data-name="New Gradient Swatch 4" x1="10.52" y1="167.45" x2="47.79" y2="167.45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4bff00"/>
+      <stop offset="0.99" stop-color="#dcfd05"/>
+    </linearGradient>
+    <radialGradient id="ar" cx="46.45" cy="175.43" r="38.4" xlink:href="#b"/>
+    <radialGradient id="as" cx="18.37" cy="152.37" r="38.4" xlink:href="#b"/>
+    <linearGradient id="at" x1="42.02" y1="468.22" x2="100.33" y2="468.22" xlink:href="#aq"/>
+    <radialGradient id="au" cx="94" cy="481.56" r="65.51" xlink:href="#b"/>
+    <radialGradient id="av" cx="54" cy="448.46" r="65.51" xlink:href="#f"/>
+  </defs>
+  <title>logo</title>
+  <g>
+    <text class="a" transform="translate(74.5 203.5) scale(0.58)">Vitamin</text>
+    <text class="b" transform="translate(229.6 139.81) scale(0.58)"><tspan class="c">T</tspan><tspan x="46.27" y="0">ree</tspan></text>
+  </g>
+  <g>
+    <circle class="d" cx="79.44" cy="88.72" r="21.62" filter="url(#blur)" />
+    <g>
+      <circle class="e" cx="72.33" cy="84.22" r="23.64"/>
+      <circle class="f" cx="72.33" cy="84.22" r="23.64"/>
+      <circle class="g" cx="72.33" cy="84.22" r="23.64"/>
+    </g>
+    <text class="h" transform="translate(54.19 94.62)">Zn</text>
+    <g>
+      <path class="i" d="M114.35,422a37,37,0,1,1,37-37A37,37,0,0,1,114.35,422Zm0-67.86A30.87,30.87,0,1,0,145.22,385,30.91,30.91,0,0,0,114.35,354.12Z" transform="translate(-42.02 -300.77)"/>
+      <path class="j" d="M114.35,422a37,37,0,1,1,37-37A37,37,0,0,1,114.35,422Zm0-67.86A30.87,30.87,0,1,0,145.22,385,30.91,30.91,0,0,0,114.35,354.12Z" transform="translate(-42.02 -300.77)"/>
+      <path class="k" d="M114.35,422a37,37,0,1,1,37-37A37,37,0,0,1,114.35,422Zm0-67.86A30.87,30.87,0,1,0,145.22,385,30.91,30.91,0,0,0,114.35,354.12Z" transform="translate(-42.02 -300.77)"/>
+    </g>
+  </g>
+  <g>
+    <circle class="l" cx="458.96" cy="115.51" r="20.65" filter="url(#blur)" />
+    <g>
+      <circle class="m" cx="452.16" cy="111.22" r="22.58"/>
+      <circle class="n" cx="452.16" cy="111.22" r="22.58"/>
+      <circle class="o" cx="452.16" cy="111.22" r="22.58"/>
+    </g>
+    <text class="p" transform="translate(441.93 121.15)">B</text>
+    <text class="q" transform="translate(461.53 110.41) scale(0.58)">2</text>
+    <g>
+      <path class="r" d="M494.18,447.31A35.32,35.32,0,1,1,529.51,412,35.36,35.36,0,0,1,494.18,447.31Zm0-64.8A29.48,29.48,0,1,0,523.66,412,29.51,29.51,0,0,0,494.18,382.51Z" transform="translate(-42.02 -300.77)"/>
+      <path class="s" d="M494.18,447.31A35.32,35.32,0,1,1,529.51,412,35.36,35.36,0,0,1,494.18,447.31Zm0-64.8A29.48,29.48,0,1,0,523.66,412,29.51,29.51,0,0,0,494.18,382.51Z" transform="translate(-42.02 -300.77)"/>
+      <path class="t" d="M494.18,447.31A35.32,35.32,0,1,1,529.51,412,35.36,35.36,0,0,1,494.18,447.31Zm0-64.8A29.48,29.48,0,1,0,523.66,412,29.51,29.51,0,0,0,494.18,382.51Z" transform="translate(-42.02 -300.77)"/>
+    </g>
+  </g>
+  <g>
+    <circle class="u" cx="485.13" cy="176.56" r="12.68" filter="url(#blur)" />
+    <g>
+      <circle class="v" cx="480.96" cy="173.92" r="13.87"/>
+      <circle class="w" cx="480.96" cy="173.92" r="13.87"/>
+      <circle class="x" cx="480.96" cy="173.92" r="13.87"/>
+    </g>
+    <text class="y" transform="translate(475.72 180.03)">K</text>
+    <g>
+      <path class="z" d="M523,496.4a21.7,21.7,0,1,1,21.7-21.7A21.72,21.72,0,0,1,523,496.4Zm0-39.81a18.11,18.11,0,1,0,18.11,18.11A18.13,18.13,0,0,0,523,456.59Z" transform="translate(-42.02 -300.77)"/>
+      <path class="aa" d="M523,496.4a21.7,21.7,0,1,1,21.7-21.7A21.72,21.72,0,0,1,523,496.4Zm0-39.81a18.11,18.11,0,1,0,18.11,18.11A18.13,18.13,0,0,0,523,456.59Z" transform="translate(-42.02 -300.77)"/>
+      <path class="ab" d="M523,496.4a21.7,21.7,0,1,1,21.7-21.7A21.72,21.72,0,0,1,523,496.4Zm0-39.81a18.11,18.11,0,1,0,18.11,18.11A18.13,18.13,0,0,0,523,456.59Z" transform="translate(-42.02 -300.77)"/>
+    </g>
+  </g>
+  <g>
+    <circle class="ac" cx="177.8" cy="85.17" r="24.98" filter="url(#blur)" />
+    <g>
+      <circle class="ad" cx="169.58" cy="79.97" r="27.32"/>
+      <circle class="ae" cx="169.58" cy="79.97" r="27.32"/>
+      <circle class="af" cx="169.58" cy="79.97" r="27.32"/>
+    </g>
+    <text class="ag" transform="translate(157.81 91.99)">A</text>
+    <g>
+      <path class="ah" d="M211.6,423.48a42.74,42.74,0,1,1,42.74-42.74A42.79,42.79,0,0,1,211.6,423.48Zm0-78.41a35.67,35.67,0,1,0,35.67,35.67A35.71,35.71,0,0,0,211.6,345.07Z" transform="translate(-42.02 -300.77)"/>
+      <path class="ai" d="M211.6,423.48a42.74,42.74,0,1,1,42.74-42.74A42.79,42.79,0,0,1,211.6,423.48Zm0-78.41a35.67,35.67,0,1,0,35.67,35.67A35.71,35.71,0,0,0,211.6,345.07Z" transform="translate(-42.02 -300.77)"/>
+      <path class="aj" d="M211.6,423.48a42.74,42.74,0,1,1,42.74-42.74A42.79,42.79,0,0,1,211.6,423.48Zm0-78.41a35.67,35.67,0,1,0,35.67,35.67A35.71,35.71,0,0,0,211.6,345.07Z" transform="translate(-42.02 -300.77)"/>
+    </g>
+  </g>
+  <g>
+    <circle class="ak" cx="222.71" cy="25.69" r="13.39" filter="url(#blur)" />
+    <g>
+      <circle class="al" cx="218.3" cy="22.91" r="14.64"/>
+      <circle class="am" cx="218.3" cy="22.91" r="14.64"/>
+      <circle class="an" cx="218.3" cy="22.91" r="14.64"/>
+    </g>
+    <text class="ao" transform="translate(211.37 29.35)">B</text>
+    <text class="ao" transform="translate(224.08 22.38) scale(0.58)">1</text>
+    <g>
+      <path class="ap" d="M260.32,346.59a22.91,22.91,0,1,1,22.91-22.91A22.93,22.93,0,0,1,260.32,346.59Zm0-42a19.12,19.12,0,1,0,19.12,19.12A19.14,19.14,0,0,0,260.32,304.56Z" transform="translate(-42.02 -300.77)"/>
+      <path class="aq" d="M260.32,346.59a22.91,22.91,0,1,1,22.91-22.91A22.93,22.93,0,0,1,260.32,346.59Zm0-42a19.12,19.12,0,1,0,19.12,19.12A19.14,19.14,0,0,0,260.32,304.56Z" transform="translate(-42.02 -300.77)"/>
+      <path class="ar" d="M260.32,346.59a22.91,22.91,0,1,1,22.91-22.91A22.93,22.93,0,0,1,260.32,346.59Zm0-42a19.12,19.12,0,1,0,19.12,19.12A19.14,19.14,0,0,0,260.32,304.56Z" transform="translate(-42.02 -300.77)"/>
+    </g>
+  </g>
+  <g>
+    <circle class="as" cx="277.52" cy="66.63" r="17.87" filter="url(#blur)" />
+    <g>
+      <circle class="at" cx="271.64" cy="62.91" r="19.54"/>
+      <circle class="au" cx="271.64" cy="62.91" r="19.54"/>
+      <circle class="av" cx="271.64" cy="62.91" r="19.54"/>
+    </g>
+    <text class="aw" transform="translate(262.5 71.51)">D</text>
+    <g>
+      <path class="ax" d="M313.66,394.26a30.57,30.57,0,1,1,30.57-30.57A30.61,30.61,0,0,1,313.66,394.26Zm0-56.09a25.52,25.52,0,1,0,25.52,25.52A25.55,25.55,0,0,0,313.66,338.17Z" transform="translate(-42.02 -300.77)"/>
+      <path class="ay" d="M313.66,394.26a30.57,30.57,0,1,1,30.57-30.57A30.61,30.61,0,0,1,313.66,394.26Zm0-56.09a25.52,25.52,0,1,0,25.52,25.52A25.55,25.55,0,0,0,313.66,338.17Z" transform="translate(-42.02 -300.77)"/>
+      <path class="az" d="M313.66,394.26a30.57,30.57,0,1,1,30.57-30.57A30.61,30.61,0,0,1,313.66,394.26Zm0-56.09a25.52,25.52,0,1,0,25.52,25.52A25.55,25.55,0,0,0,313.66,338.17Z" transform="translate(-42.02 -300.77)"/>
+    </g>
+  </g>
+  <g>
+    <circle class="ba" cx="377.3" cy="68.69" r="29.37" filter="url(#blur)" />
+    <g>
+      <circle class="bb" cx="367.64" cy="62.57" r="32.11"/>
+      <circle class="bc" cx="367.64" cy="62.57" r="32.11"/>
+      <circle class="bd" cx="367.64" cy="62.57" r="32.11"/>
+    </g>
+    <text class="be" transform="translate(353.91 77.7)">B</text>
+    <text class="bf" transform="translate(381.78 62.72) scale(0.58)">6</text>
+    <g>
+      <path class="bg" d="M409.66,413.59a50.24,50.24,0,1,1,50.24-50.24A50.3,50.3,0,0,1,409.66,413.59Zm0-92.17a41.93,41.93,0,1,0,41.93,41.93A42,42,0,0,0,409.66,321.42Z" transform="translate(-42.02 -300.77)"/>
+      <path class="bh" d="M409.66,413.59a50.24,50.24,0,1,1,50.24-50.24A50.3,50.3,0,0,1,409.66,413.59Zm0-92.17a41.93,41.93,0,1,0,41.93,41.93A42,42,0,0,0,409.66,321.42Z" transform="translate(-42.02 -300.77)"/>
+      <path class="bi" d="M409.66,413.59a50.24,50.24,0,1,1,50.24-50.24A50.3,50.3,0,0,1,409.66,413.59Zm0-92.17a41.93,41.93,0,1,0,41.93,41.93A42,42,0,0,0,409.66,321.42Z" transform="translate(-42.02 -300.77)"/>
+    </g>
+  </g>
+  <g>
+    <circle class="bj" cx="34.76" cy="170.99" r="17.04" filter="url(#blur)" />
+    <g>
+      <circle class="bk" cx="29.16" cy="167.45" r="18.63"/>
+      <circle class="bl" cx="29.16" cy="167.45" r="18.63"/>
+      <circle class="bm" cx="29.16" cy="167.45" r="18.63"/>
+    </g>
+    <text class="bn" transform="translate(21.45 175.65)">C</text>
+    <g>
+      <path class="bo" d="M71.18,497.38a29.16,29.16,0,1,1,29.16-29.16A29.19,29.19,0,0,1,71.18,497.38Zm0-53.49a24.33,24.33,0,1,0,24.33,24.33A24.36,24.36,0,0,0,71.18,443.89Z" transform="translate(-42.02 -300.77)"/>
+      <path class="bp" d="M71.18,497.38a29.16,29.16,0,1,1,29.16-29.16A29.19,29.19,0,0,1,71.18,497.38Zm0-53.49a24.33,24.33,0,1,0,24.33,24.33A24.36,24.36,0,0,0,71.18,443.89Z" transform="translate(-42.02 -300.77)"/>
+      <path class="bq" d="M71.18,497.38a29.16,29.16,0,1,1,29.16-29.16A29.19,29.19,0,0,1,71.18,497.38Zm0-53.49a24.33,24.33,0,1,0,24.33,24.33A24.36,24.36,0,0,0,71.18,443.89Z" transform="translate(-42.02 -300.77)"/>
+    </g>
+  </g>
+</svg>

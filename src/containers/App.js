@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 // import * as graphActions from '../actions/graphActions';
 import Autocomplete from './autocomplete/autocompleteComp'
 // import {render} from 'react-dom'
-import logo from "../images/vitamin-tree-logo.png";
+import logo from "../images/vitamin-tree-logo.svg";
 import './app.css';
 
 
