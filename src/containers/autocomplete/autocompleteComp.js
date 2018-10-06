@@ -34,24 +34,31 @@ class Autocomplete extends Component {
 };
 const mapDispatchToProps = dispatch => ({
 	searchVariants: (e) => {
+		const inputedValue = e.target.value;
+		dispatch({
+			type: 'ON_CHANGE',
+			payload: inputedValue
+		});
+	},
+	searchVariants2: (e) => {
 		const getVariants = () => {
 			return (dispatch) => {
 				const inputedValue = e.target.value;
 				dispatch({
 					type: 'ON_CHANGE',
-					payload: inputedValue
+					payload: { dispatch, inputedValue }
 				});
-				dispatch({type:'HIDE_CONTENT', payload:{isVisible:false}});
-				if (inputedValue.length > 2) {
-					fetch('https://v-tree.ru/api/autocomplete?w='+inputedValue)
-					.then(response => response.json())
-					.then(responseData => {
-						dispatch({type:'DROP_LIST', payload:responseData});
-					})
-					.catch(error => {
-       					console.log('Error fetching and parsing data', error);
-      				} 
-				)}
+				// dispatch({type:'HIDE_CONTENT', payload:{isVisible:false}});
+				// if (inputedValue.length > 2) {
+				// 	fetch('https://v-tree.ru/api/autocomplete?w='+inputedValue)
+				// 	.then(response => response.json())
+				// 	.then(responseData => {
+				// 		dispatch({type:'DROP_LIST', payload:responseData});
+				// 	})
+				// 	.catch(error => {
+    //    					console.log('Error fetching and parsing data', error);
+    //   				} 
+				// )}
 			}			
 		}
 		dispatch(getVariants())
@@ -77,3 +84,4 @@ const mapStateToProps = (state) => {
 	return { handleInput: this.handleInput}
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Autocomplete);
+			
