@@ -11,3 +11,28 @@
     margin-bottom: 20px;
     font-weight: bold;
 }
+.products {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+}
+.products > div {
+	margin-right: 5px;
+}
+.products .product-img {
+	width: 50px;
+	height: 50px;
+}

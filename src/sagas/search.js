@@ -10,7 +10,9 @@ function* onChangeInput(action) {
 	} else {
 	   	try {
 	   		// yield delay(300);
+	   		yield put({type:'PRELOADER_START'});
 	   		const request = yield call(Api.getVariants, action.payload);
+	   		yield put({type:'PRELOADER_FINISH'});
 	   		yield put({type:'DROP_LIST', payload: request });
 	   } catch (e) {
 	   }
@@ -18,6 +20,6 @@ function* onChangeInput(action) {
 }
 
 
-export default function* mySaga() {
+export default function* () {
   yield takeLatest("ON_CHANGE", onChangeInput);
 }

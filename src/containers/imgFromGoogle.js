@@ -6,6 +6,6 @@ export default class imgFromGoogle extends Component {
 	}
 	render() {
 		// const url = GoogleImagesUrl.create('cute cats', { size: 'large' })
-		return <img width="100px" height="100px" src={'http://bm.img.com.ua/nxs/img/prikol/images/large/9/2/75129.jpg'} alt=""/>;
+		return <img className="product-img" src={'http://bm.img.com.ua/nxs/img/prikol/images/large/9/2/75129.jpg'} alt=""/>;
 	}
 }

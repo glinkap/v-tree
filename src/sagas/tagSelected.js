@@ -15,6 +15,6 @@ function* dataOnSelected(action) {
 }
 
 
-export default function* mySaga() {
+export default function* () {
   yield takeLatest("TAG_SELECTED", dataOnSelected);
 }
