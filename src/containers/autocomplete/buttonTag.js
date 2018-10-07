@@ -8,23 +8,21 @@ class ButtonTag extends Component {
 		this.tagClick = this.tagClick.bind(this);
 	}
 	tagClick () {
-		this.props.tagClick({link:this.props.link, index:this.props.index});
+		this.props.tagClick({	link:this.props.link, 
+								index:this.props.index,
+								prevSelected:this.props.prevSelected});
 	}
 	render() {
 		return <div className={`listItem ${this.props.selected}`} onClick={ this.tagClick } >{ this.props.text }</div>
 	}
 }
 const mapDispatchToProps = (dispatch) => ({
-		tagClick: ({link, index}) => {
-			dispatch({type:'TAG_SELECTED', payload:{index:index, link}});
-
-			// dispatch({type:'CONTENT_INITIAL_STATE'});
-			// dispatch({type:'PRODUCT_INITIAL_STATE'});
-			// dispatch(actions.showContent({link}));
+		tagClick: ({link, index, prevSelected}) => {
+			if (index !== prevSelected) {
+				dispatch({type:'TAG_SELECTED', payload:{ index:index, link }});
+			}
 		}
 })
 const mapStateToProps = (state) => ({
-	// autocompleteReducer:state.autocompleteReducer,
-	// dropListeReducer:state.dropListReducer,
 })
 export default connect(mapStateToProps, mapDispatchToProps)(ButtonTag);

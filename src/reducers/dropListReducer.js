@@ -1,7 +1,8 @@
 const initialState = {
 	data:[],
 	isVisible:false,
-	selected:null	
+	selected:null,
+	prevSelected:null	
 }
 
 export default function dropListReducer (state = initialState, action) {
@@ -20,7 +21,8 @@ export default function dropListReducer (state = initialState, action) {
 		} 
 		case 'TAG_SELECTED' : {
 			return {
-				...state, selected: action.payload.index
+				...state, selected: action.payload.index,
+							prevSelected:action.payload.index/*state.selected*/
 			}
 		}
 		case 'HIDE_DROP_LIST' : {

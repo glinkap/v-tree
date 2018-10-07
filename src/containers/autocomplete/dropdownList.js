@@ -15,6 +15,7 @@ class DropdownListComp extends Component {
 									text={item.text} 
 									link={item.link} 
 									index={item.index}
+									prevSelected={this.props.prevSelected}
 									selected={this.props.selected == index ? 'selected' : '' } />
 			})
 			return <ul className="autocomplete-ul">{listItems}</ul>			

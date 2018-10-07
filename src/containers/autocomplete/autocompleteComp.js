@@ -75,8 +75,9 @@ const mapDispatchToProps = dispatch => ({
 	},
 	clearInput: () => {
 		dispatch({type:'CLEAR_INPUT'});
-		dispatch({type:'HIDE_CONTENT', payload:{isVisible:false}});
-		dispatch({type:'HIDE_DROP_LIST'})
+		dispatch({type:'DROP_LIST_INITIAL_STATE'});
+		dispatch({type:'CONTENT_INITIAL_STATE'});
+		dispatch({type:'PRODUCT_INITIAL_STATE'})
 
 	}
 });

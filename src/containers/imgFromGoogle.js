@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 // const GoogleImagesUrl = require('GoogleImagesUrl');
 export default class imgFromGoogle extends Component {	
 	componentWillReceiveProps(props) { 
-		console.log("props", props);
-
 	}
 	render() {
 		// const url = GoogleImagesUrl.create('cute cats', { size: 'large' })

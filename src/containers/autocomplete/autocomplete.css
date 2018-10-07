@@ -105,6 +105,9 @@ p {
 .autocomplete-ul .listItem:hover {
 	background-color: #FFF3D4;
 }
+.autocomplete-ul .listItem.selected:hover {
+	background-color: #FDCB34;
+}
 .autocomplete-ul .small {
 	font-size: 16px;
 }
