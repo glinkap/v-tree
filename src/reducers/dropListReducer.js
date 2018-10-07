@@ -7,11 +7,15 @@ const initialState = {
 export default function dropListReducer (state = initialState, action) {
 	switch(action.type) {
 		case 'DROP_LIST' : {
-			const data = action.payload.list.map((item,index) => {
-				return {...item, index:index}
-			});
-			return {
-				...state, data, isVisible: action.payload.list.length ? true : false
+			if (action.payload.status === 'ok') {				
+				const data = action.payload.list.map((item,index) => {
+					return {...item, index:index}
+				});
+				return {
+					...state, data, isVisible: action.payload.list.length ? true : false
+				}
+			} else {
+				return state;
 			}
 		} 
 		case 'TAG_SELECTED' : {
@@ -22,6 +26,11 @@ export default function dropListReducer (state = initialState, action) {
 		case 'HIDE_DROP_LIST' : {
 			return {
 				...state, isVisible:false
+			}
+		}
+		case 'DROP_LIST_INITIAL_STATE' : {
+			return {
+				...state, ...initialState
 			}
 		}
 		default: return state

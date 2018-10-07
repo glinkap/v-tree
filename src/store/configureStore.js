@@ -2,7 +2,7 @@ import rootReducer from '../reducers/index'
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
-import mySaga from '../sagas/saga';
+import sagaRoot from '../sagas/sagaRoot';
 import { createStore, applyMiddleware/*, compose*/ } from 'redux';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'production') {
 	const compMware = composeWithDevTools(applyMiddleware(thunk), applyMiddleware(sagaMiddleware));
 	finalStore = createStore(rootReducer, compMware);
 }
-sagaMiddleware.run(mySaga)
+sagaMiddleware.run(sagaRoot)
 export default finalStore;
 
 // sagaMiddleware.run(mySaga);

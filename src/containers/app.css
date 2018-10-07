@@ -29,12 +29,6 @@ body {
 	-ms-align-items: center;
 	align-items: center;
 }
-.logo {
-	margin-bottom: 2rem;
-	margin-top: 4rem;
-	width: 300px;
- 	mix-blend-mode: multiply;
-}
 .small {
 	font-size: 14px;	
 	color: #444;
@@ -43,4 +37,12 @@ body {
 	.container {
 		max-width: 720px;
 	}
+}
+.svg-logo {
+	max-width: 300px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	cursor:pointer;
+	user-select: none;
 }

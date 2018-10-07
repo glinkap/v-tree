@@ -16,11 +16,11 @@ class ButtonTag extends Component {
 }
 const mapDispatchToProps = (dispatch) => ({
 		tagClick: ({link, index}) => {
+			dispatch({type:'TAG_SELECTED', payload:{index:index, link}});
 
-			dispatch({type:'CONTENT_INITIAL_STATE'});
-			dispatch({type:'PRODUCT_INITIAL_STATE'});
-			dispatch(actions.showContent({link}));
-			dispatch({type:'TAG_SELECTED', payload:{index:index}});
+			// dispatch({type:'CONTENT_INITIAL_STATE'});
+			// dispatch({type:'PRODUCT_INITIAL_STATE'});
+			// dispatch(actions.showContent({link}));
 		}
 })
 const mapStateToProps = (state) => ({

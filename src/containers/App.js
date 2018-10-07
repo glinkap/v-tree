@@ -7,14 +7,14 @@ import Autocomplete from './autocomplete/autocompleteComp'
 // import {render} from 'react-dom'
 import logo from "../images/vitamin-tree-logo.svg";
 import './app.css';
-
+import SvgLogo from '../components/v-tree-logo'
 
 class App extends Component {
 	
 	render() {
 		return (
-			<div className="container">				
-{				<img src={logo} className="logo" alt="logo" />	}
+			<div className="container">
+				<SvgLogo className="svg-logo" />
 				<Autocomplete />
 				{ process.env.NODE_ENV === 'development' ? null :<YMInitializer accounts={[48185741]} /> }
 			</div>	
