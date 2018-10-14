@@ -1,6 +1,7 @@
 const initialState = {
 	isVisible:false,
-	data:''
+	data:'',
+	loading:false
 
 }
 export function contentReducer(state = initialState, action) {
@@ -10,6 +11,16 @@ export function contentReducer(state = initialState, action) {
 				...state, ...action.payload
 			} 
 		} 
+		case 'CONTENT_PRELOADER_START': {
+			return {
+				...state, loading:true
+			} 
+		}
+		case 'CONTENT_PRELOADER_END': {
+			return {
+				...state, loading:false
+			} 
+		}  
 		case 'HIDE_CONTENT': {
 			return {
 				...state, isVisible: action.payload.isVisible

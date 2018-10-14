@@ -6,10 +6,30 @@
 	padding: 20px 0;
 }
 .autocomplete-content {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	width: 80%;
     border: 1px solid #FDCB34;	
     padding: 20px;
-    margin-bottom: 20px;
     font-weight: bold;
+    position: relative;
+}
+.autocomplete-content .preloader {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	/*margin: 0 auto;*/
 }
 .products {
 	display: -webkit-flex;

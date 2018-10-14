@@ -46,3 +46,12 @@ body {
 	cursor:pointer;
 	user-select: none;
 }
+.preloader {
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+}
+.inputWrapper .preloader {
+	right: 38px;
+}

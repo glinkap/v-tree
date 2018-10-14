@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Vitamin from '../../components/vitamin';
 import Products from '../../components/products';
+import Prelooader from '../../components/preloadersvg';
 
 function contentInfo() {
 	if (this.props.isVisible) {
@@ -34,9 +35,13 @@ class Content extends Component {
 	}
 		
 	render() {
-		if (this.props.isVisible) {
+		if (this.props.loading) {
+			return <div className="autocomplete-content">
+			<Prelooader loading={this.props.loading} />
+			</div>
+		} else if (this.props.isVisible && !this.props.loading) {
 			return (
-			<div className="autocomplete-content">
+			<div className="autocomplete-content">			
 				<div>{this.props.data}</div>	
 				<div className="autocomplete-content-header">{this.props.content}</div>			
 				<div className="vitamins-block">{this.VitaminsMaped()}</div>

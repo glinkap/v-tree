@@ -5,6 +5,7 @@ import { DropdownList } from './dropdownList';
 import './autocomplete.css';
 import Content from './content';
 import InputCross from '../../components/inputCross';
+import Prelooader from '../../components/preloadersvg';
 
 class Autocomplete extends Component {
 	clear() {
@@ -22,6 +23,7 @@ class Autocomplete extends Component {
 							className="autocomplete-input" 
 							ref={el => this.input = el}
 							onChange={this.props.searchVariants.bind(this)} />
+					<Prelooader loading={this.props.loading} />
 					<InputCross onClick={this.clear.bind(this)} />
 				</div>	
 				<DropdownList inputedValue = {this.props.inputedValue} />
@@ -39,29 +41,6 @@ const mapDispatchToProps = dispatch => ({
 			type: 'ON_CHANGE',
 			payload: inputedValue
 		});
-	},
-	searchVariants2: (e) => {
-		const getVariants = () => {
-			return (dispatch) => {
-				const inputedValue = e.target.value;
-				dispatch({
-					type: 'ON_CHANGE',
-					payload: { dispatch, inputedValue }
-				});
-				// dispatch({type:'HIDE_CONTENT', payload:{isVisible:false}});
-				// if (inputedValue.length > 2) {
-				// 	fetch('https://v-tree.ru/api/autocomplete?w='+inputedValue)
-				// 	.then(response => response.json())
-				// 	.then(responseData => {
-				// 		dispatch({type:'DROP_LIST', payload:responseData});
-				// 	})
-				// 	.catch(error => {
-    //    					console.log('Error fetching and parsing data', error);
-    //   				} 
-				// )}
-			}			
-		}
-		dispatch(getVariants())
 	},
 	onChangeInput: (e) => {
 		const inputedValue = e.target.value;
@@ -82,7 +61,8 @@ const mapDispatchToProps = dispatch => ({
 	}
 });
 const mapStateToProps = (state) => {
-	return { handleInput: this.handleInput}
+	return { handleInput: this.handleInput,
+				loading: state.autocompleteReducer.loading}
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Autocomplete);
 			
