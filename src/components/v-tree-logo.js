@@ -242,6 +242,7 @@ const SvgComponent = props => (
     </defs>
     <title>Untitled-1</title>
     <text
+      className="text-vitamin"
       transform="matrix(.58 0 0 .58 74.5 203.5)"
       fontSize={192.86}
       fontFamily="Franklin Gothic Medium"
@@ -249,14 +250,14 @@ const SvgComponent = props => (
       Vitamin
     </text>
     <text
+    className=" text-tree"
       transform="matrix(.58 0 0 .58 229.6 139.81)"
       fontSize={106.96}
       fill="#26f300"
       fontFamily="Franklin Gothic Medium"
     >
-      <tspan letterSpacing={-5.15}>T</tspan>
-      <tspan x={46.27} y={0}>
-        ree
+      <tspan x={-34.73} y={0}>
+        Tree
       </tspan>
     </text>
     <circle cx={79.44} cy={88.72} r={21.62} fill="#00fd84" filter="url(#blur)" />

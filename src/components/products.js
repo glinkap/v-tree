@@ -24,11 +24,7 @@ class Products extends Component {
 			return (<div className="products">
 						{	
 							vitamin.products.map((item,i)=>{
-							return (
-								<div key={`d${i}`}>
-									<div key={i}>{item.product.name}</div>
-									<ImgFromGoogle key={`i${i}`} toFind={item.product.name} />	
-								</div>)
+							return (<div key={i}>{item.product.name}</div>)
 							})
 						}
 				</div>)

@@ -55,3 +55,15 @@ body {
 .inputWrapper .preloader {
 	right: 38px;
 }
+.text-tree, .text-vitamin {
+	font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+.text-tree {
+    font-size: 110px;
+
+}
+.text-vitamin {
+    font-size: 173px;
+}
